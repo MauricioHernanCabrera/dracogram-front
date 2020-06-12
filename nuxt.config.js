@@ -15,7 +15,7 @@ switch (process.env.NODE_ENV) {
 const page = {
   title: "Dracogram",
   short_name: "HU",
-  description: "Bienvenido a la aplicación. Ingresá y conoce los usuarios",
+  description: "Bienvenido a la Dracogram. Ingresá y conoce los usuarios",
   safeImg: {
     url: `${FRONT_URL}/images/safe_image.jpg`,
     alt: "Dracogram",
@@ -23,7 +23,7 @@ const page = {
     width: "540",
     height: "340"
   },
-  favicon: `${FRONT_URL}/images/logo2.ico`,
+  favicon: `${FRONT_URL}/images/icon.ico`,
   author: `Mauricio Hernan Cabrera`
 };
 
@@ -161,7 +161,7 @@ module.exports = {
     scope: "/",
     display: "standalone",
     background_color: "#fff",
-    theme_color: "#f52e41"
+    theme_color: "#337291"
   },
 
   build: {
