@@ -301,9 +301,10 @@ export default {
 
     submitFormCreate(payload) {
       const callbackTry = async () => {
-        const { message, data } = await UserService(this.$axios).createOne(
-          payload
-        );
+        const resUser = await UserService(this.$axios).createOne(payload);
+        console.log(resUser);
+        const { message, data } = resUser;
+
         this.users.push({ ...data, gravatarUrl: makeGravatarUrl(data.email) });
         this.cancelDialog();
         return {
@@ -321,7 +322,6 @@ export default {
           userId,
           body
         );
-        console.log({ message, data });
 
         const userFindIndex = user => user.id == userId;
         const userIndex = this.users.findIndex(userFindIndex);

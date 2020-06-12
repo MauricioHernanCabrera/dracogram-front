@@ -3,11 +3,12 @@ let FRONT_URL = "";
 
 switch (process.env.NODE_ENV) {
   case "production":
-    API_URL = "https://api.hernan.rapitienda.net";
-    FRONT_URL = "https://hernan.rapitienda.net";
+    API_URL = "https://api.dracogram.rapitienda.net";
+    FRONT_URL = "https://dracogram.rapitienda.net";
     break;
   default:
-    API_URL = "http://localhost/curso-introduccion-php-deploy";
+    // API_URL = "http://localhost/curso-introduccion-php-deploy";
+    API_URL = "https://api.dracogram.rapitienda.net";
     FRONT_URL = "http://127.0.0.1:3000";
     break;
 }

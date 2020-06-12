@@ -31,6 +31,8 @@ export default {
           });
       } catch (error) {
         this.handleError(error);
+        console.log(error);
+        console.log(error.response);
         if (callbackCatch) await callbackCatch(error);
       } finally {
         this.loading = false;
