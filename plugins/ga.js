@@ -19,7 +19,7 @@ export default ({ app, store }) => {
     "ga"
   );
 
-  ga("create", "__key__", "auto");
+  ga("create", "UA-169298461-1", "auto");
 
   app.router.afterEach((to, from) => {
     ga("set", "page", to.path);

@@ -28,15 +28,9 @@
                   active: 'create'
                 })
               "
-              >Crear usuario</v-btn
-            >
+            >Crear usuario</v-btn>
 
-            <v-footer
-              class="btn-create-floating"
-              height="72px"
-              app
-              v-if="breakpoint.xs"
-            >
+            <v-footer class="btn-create-floating" height="72px" app v-if="breakpoint.xs">
               <div class="custom-container">
                 <v-btn
                   class="btn"
@@ -64,9 +58,7 @@
             v-if="usersFiltered.length == 0"
             class="user-item custom-list-tile-user-item"
           >
-            <v-list-tile-content>
-              No se encontraron usuarios
-            </v-list-tile-content>
+            <v-list-tile-content>No se encontraron usuarios</v-list-tile-content>
           </v-list-tile>
 
           <v-list-tile
@@ -80,9 +72,7 @@
             </v-list-tile-avatar>
 
             <v-list-tile-content>
-              <p class="user-item-fullname text-truncate">
-                {{ user.firstName }} {{ user.lastName }}
-              </p>
+              <p class="user-item-fullname text-truncate">{{ user.firstName }} {{ user.lastName }}</p>
               <p class="user-item-email text-truncate">{{ user.email }}</p>
             </v-list-tile-content>
 
