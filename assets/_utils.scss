@@ -1,0 +1,63 @@
+$color_dark: #2c333b;
+$color_dark2: #313236;
+$color_dark3: #000000;
+$color_dark4: #313237;
+// $color_dark: #4a4a4a;
+$color_light: #fff;
+
+$color_grey: #f5f5f5;
+$color_grey2: #eee;
+$color_grey3: #f6f8f7;
+$color_grey4: #e7e7e7;
+$color_grey5: #f9f9f9;
+$color_grey6: #858585;
+
+$color_primary: #009ee3;
+$color_secondary: #009ee3;
+$color_warning: #f5bd41;
+$color_success: #5ea037;
+$font1: "Karla";
+$font2: "Lobster";
+
+$grid-bp: (
+  xs: 360px,
+  sm: 600px,
+  md: 960px,
+  lg: 1264px,
+  xl: 1904px
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($grid-bp, $size)) {
+    @content;
+  }
+}
+
+/*
+  100 Thin
+  200 Extra Light
+  300 Light
+  400 Normal
+  500 Medium
+  600 Semi Bold
+  700 Bold
+  800 Extra Bold
+  900 Ultra Bold
+*/
+
+$z-index: (
+  toolbar: 100,
+  footer-btn-cart: 101,
+  footer-landing-overlay: 1,
+  footer-landing-container: 2,
+  product-overlay: 9,
+  product-image: 10,
+  add-product: 20,
+  product-btn-add-to-cart: 10,
+  core-drawer-admin-user-overlay: 12,
+  core-drawer-admin-user-content: 13
+);
+
+@mixin z-index($key) {
+  z-index: map-get($z-index, $key);
+}

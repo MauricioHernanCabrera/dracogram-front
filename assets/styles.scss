@@ -1,0 +1,146 @@
+@import "utils";
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  border: 2px solid red;
+  transform: translate(30px, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  border: 2px solid blue;
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.delay-05s {
+  animation-delay: 0.5s;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.p-absolute {
+  top: 0;
+  left: 0;
+  position: absolute !important;
+}
+
+.z-index-10 {
+  z-index: 10 !important;
+}
+
+.z-index--1 {
+  z-index: -1 !important;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: $color_dark;
+  background-color: $color_light;
+  font-size: 16px;
+}
+
+.application--wrap {
+  background-color: $color_grey3;
+}
+
+.custom-image-product {
+  border-radius: 6px;
+}
+
+.custom-container {
+  max-width: map-get($grid-bp, xl);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 12px;
+  overflow-x: hidden;
+}
+
+.custom-container-md {
+  max-width: map-get($grid-bp, md);
+}
+
+.custom-container-sm {
+  max-width: map-get($grid-bp, sm);
+}
+
+.custom-search-filter {
+  &.theme--light.v-text-field--solo > .v-input__control > .v-input__slot {
+    // border-radius: 10px;
+  }
+  &.v-input {
+    & > .v-input__control {
+      .v-input__slot {
+        .v-text-field__slot {
+          input {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.v-responsive.v-image.custom-store-image {
+  .v-responsive__sizer {
+    padding-bottom: 56.25% !important;
+
+    @include breakpoint(sm) {
+      padding-bottom: 25% !important;
+    }
+
+    @include breakpoint(md) {
+      padding-bottom: 56.25% !important;
+    }
+  }
+
+  .v-image__image {
+    background-size: contain;
+    // @include breakpoint(sm) {
+    //   background-size: cover;
+    // }
+    // @include breakpoint(md) {
+    // background-size: contain;
+    // }
+  }
+}
+
+.custom-dialog-image-zoom {
+}
+
+.custom-list-tile-user-item {
+  .v-list__tile {
+    width: 100%;
+  }
+}
